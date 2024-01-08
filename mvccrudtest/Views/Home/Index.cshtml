@@ -34,6 +34,7 @@
             url: "@Url.Action("Add")",
             data: { x: x, y: y },
             success: function (result) {
+                aler(result);
                 $("#divResult").html(result);
             },
             error: function (error) {
