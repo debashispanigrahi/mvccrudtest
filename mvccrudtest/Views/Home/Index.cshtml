@@ -29,7 +29,17 @@
     function fnSum() {
         var x = parseInt($("#txtval1").val());
         var y = parseInt($("#txtval2").val());
-        var z = x + y;
-        $("#divResult").html(z);
+        $.ajax({
+            type: "GET",
+            url: "@Url.Action("Add")",
+            data: { x: x, y: y },
+            success: function (result) {
+                $("#divResult").html(result);
+            },
+            error: function (error) {
+                // Handle errors
+                console.error("Error: " + JSON.stringify(error));
+            }
+        });        
     }
 </script>

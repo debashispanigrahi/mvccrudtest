@@ -18,6 +18,12 @@ namespace mvccrudtest.Controllers
             return View();
         }
 
+        [HttpGet]
+        public int Add(int x, int y)
+        {
+            return x + y;
+        }
+
         public IActionResult Privacy()
         {
             return View();
