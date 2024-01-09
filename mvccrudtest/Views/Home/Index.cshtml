@@ -31,7 +31,7 @@
         $.ajax({
             type: "GET",
             url: "@Url.Action("Add")",
-            data: { x: x, y: y },
+            data: { Num1: x, Num2: y },
             success: function (result) {
                 alert(result);
                 $("#divResult").html(result);

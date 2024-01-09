@@ -19,9 +19,9 @@ namespace mvccrudtest.Controllers
         }
 
         [HttpGet]
-        public int Add(int x, int y)
+        public int Add(AddModel addModel)
         {
-            return x + y;
+            return addModel.Num1 + addModel.Num2;
         }
 
         public IActionResult Privacy()
